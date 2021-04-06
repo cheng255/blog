@@ -18,7 +18,7 @@ public class JDBCUtil {
     //URL
     private static final String URL = "jdbc:mysql://localhost:3306/blog?user=root&password=root&useUnicode=true&characterEncoding=UTF-8";
     //数据库连接池
-    private static DataSource DS;
+    private static volatile DataSource DS;
     /**
      * 工具类提供数据jdbc操作
      * 存在的不足: 1.static代码块出现错误，NoClassDefFoundError 表示类可以找到，但类加载失败，无法运行
